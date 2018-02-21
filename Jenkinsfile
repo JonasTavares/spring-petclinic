@@ -7,9 +7,9 @@ node {
 	}
 	
 	stage('Build application'){
-		steps{
-			sh 'mvn clean install'
-		}
+
+		sh 'mvn clean install'
+
 	}
 
  
