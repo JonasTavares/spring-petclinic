@@ -7,8 +7,10 @@ node {
 	}
 	
 	stage('Build application'){
-
-		sh 'mvn clean install'
+		withMaven(maven: 'Oracle BPM Quickstart 12.2.1'){
+		
+			sh 'mvn clean install'
+		}
 
 	}
 
