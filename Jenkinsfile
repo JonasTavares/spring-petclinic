@@ -15,13 +15,13 @@ pipeline {
 		
 		stage('Build Docker image') {
             steps {
-                sh "sudo -S true docker build -t jonasjavares/spring-petclinic:latest ."
+                sh "sudo docker build -t jonasjavares/spring-petclinic:latest ."
             }
         }
 		
 		stage('Run Docker image') {
             steps {
-                sh "sudo -S true docker run -it 9000:9000 jonastavares/spring-petclinic:latest ."
+                sh "sudo docker run -it 9000:9000 jonastavares/spring-petclinic:latest ."
             }
         }
     }
