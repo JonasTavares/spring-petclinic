@@ -6,7 +6,7 @@ pipeline {
     stage('Maven Install') {
       agent {
         docker {
-          image 'Oracle BPM Quickstart 12.2.1'
+          image 'maven:3.5.0'
         }
       }
       steps {
