@@ -3,16 +3,18 @@ pipeline {
     tools {
         maven 'maven3'
     }
-	def app
 	
 	stages{
 		stage('Checkout'){
-			checkout scm
+			steps{
+				checkout scm
+			}
 		}
 		
 		stage('Build application'){
-			sh 'mvn -version'
-
+			steps{
+				sh 'mvn -version'
+			}
 		}
 	}
 
