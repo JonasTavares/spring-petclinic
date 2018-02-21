@@ -21,7 +21,7 @@ pipeline {
 		
 		stage('Run Docker image') {
             steps {
-                sh "sudo docker run 9000:9000 jonastavares/spring-petclinic:latest ."
+                sh "sudo docker run -p 9000:9000 jonastavares/spring-petclinic:latest ."
             }
         }
     }
