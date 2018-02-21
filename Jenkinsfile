@@ -15,7 +15,7 @@ pipeline {
 		
 		stage('Build Docker image') {
             steps {
-                sh "sudo docker build -t jonasjavares/spring-petclinic:latest ."
+                sh "sudo docker build -t jonastavares/spring-petclinic:latest ."
             }
         }
 		
