@@ -1,5 +1,8 @@
 node {
-
+	agent any
+    tools {
+        maven 'maven3'
+    }
 	def app
 	
 	stage('Checkout'){
@@ -7,10 +10,7 @@ node {
 	}
 	
 	stage('Build application'){
-		withMaven(maven: 'Oracle BPM Quickstart 12.2.1'){
-		
-			sh 'mvn clean install'
-		}
+		sh 'mvn -version'
 
 	}
 
