@@ -14,13 +14,13 @@ pipeline {
 		
 		stage('Build Docker image') {
             steps {
-                sh "docker build -t JonasTavares/spring-petclinic:latest ."
+                sh "docker build -t jonasjavares/spring-petclinic:latest ."
             }
         }
 		
 		stage('Run Docker image') {
             steps {
-                sh "docker build -it 9000:9000 JonasTavares/spring-petclinic:latest ."
+                sh "docker build -it 9000:9000 jonastavares/spring-petclinic:latest ."
             }
         }
     }
