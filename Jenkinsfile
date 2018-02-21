@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Install') {
             steps {
+				sh "whoami"
                 sh "mvn clean install"
             }
         }
